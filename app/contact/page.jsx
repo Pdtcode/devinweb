@@ -104,10 +104,10 @@ const Contact = () => {
       <div>
 
         {/*Overlay For Mobile*/}
-        <div className='flex items-center justify-center bg-inherit bg-center bg-cover contact-bgimg h-screen sm:hidden'>
-          <div className='absolute top-0 left-0 h-screen right-0 bottom-0 bg-black/60 z-[2]' />
+        <div className='flex items-center justify-center h-screen sm:hidden'>
+          <div className='absolute top-0 left-0 h-screen right-0 bottom-0' />
           <div className='z-[3] mb-[1rem] mt-[2rem]'>
-            <div className=' text-white ml-[2.5rem] mr-[2.5rem]'>
+            <div className=' ml-[2.5rem] mr-[2.5rem]'>
               <h2 className='text-lg font-bold'>Contact</h2>
             </div>
             {formSubmitted ? (
@@ -118,7 +118,7 @@ const Contact = () => {
             ) : null}
 
             {/*Mobile Form*/}
-            <form onSubmit={handleSubmit} className="rounded-3xl shadow-xl sm:flex flex-col px-[1rem] py-[1rem] bg-slate-800/50 z-[3] ml-[2rem] mr-[2rem]">
+            <form onSubmit={handleSubmit} className="rounded-3xl shadow-xl sm:flex flex-col px-[1rem] py-[1rem] bg-slate-800/50 z-0 ml-[2rem] mr-[2rem]">
 
               {/*Full Name */}
               <label htmlFor="name" className="flex text-gray-500 font-light dark:text-gray-50 pr-10">Full Name<span className="text-red-500">*</span></label>

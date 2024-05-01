@@ -5,6 +5,7 @@ import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
+  const [navmenu, setNavmenu] = useState(false);
   const [color, setColor] = useState('transparent');
   const [textColor, setTextColor] = useState('black');
   const [isSticky, setIsSticky] = useState(false);
@@ -12,6 +13,10 @@ const Navbar = () => {
 
   const handleNav = () => {
     setNav(!nav);
+  };
+
+  const handleNavMenu = () => {
+    setNavmenu(!navmenu);
   };
 
   useEffect(() => {
@@ -67,27 +72,27 @@ const Navbar = () => {
         </ul>
 
         {/* Mobile Button */}
-        <div className='flex sm:hidden z-10 mr-5'>
-          <div className='flex w-full ml-4 mr-80 my-5'>Devin Ta</div>
-          <div onClick={handleNav} className='flex items-center p-3'>
-            <AiOutlineMenu className='' size={20} style={{ color: `${textColor}` }} />
+        <div className='flex sm:hidden z-20 mr-5'>
+          <div className='flex text-black w-full ml-4 mr-80 my-5'>Devin Ta</div>
+          <div onClick={handleNavMenu} className='flex items-center p-3'>
+          {navmenu ? <AiOutlineClose size={20} style={{color: 'white'}}/> : <AiOutlineMenu size={20} style={{color: 'black'}}/> }
           </div>
         </div>
 
         {/* Mobile Menu */}
-        <div className={nav
-          ? 'sm:hidden absolute top-0 left-0 right-0 bottom-0 flex justify-center items-center w-full h-screen bg-black text-center ease-in duration-300'
-          : 'sm:hidden absolute top-0 left-[-100%] right-0 bottom-0 flex justify-center items-center w-full h-screen bg-black text-center ease-in duration-300'
+        <div className={navmenu
+          ? 'sm:hidden absolute top-0 left-0 right-0 bottom-0 flex z-10 justify-center items-center w-full h-screen text-white bg-black text-center ease-in duration-300'
+          : 'sm:hidden absolute top-0 left-[-100%] right-0 bottom-0 flex z-10 justify-center items-center w-full h-screen text-white bg-black text-center ease-in duration-300'
         }>
           <ul>
             <li className='p-4 text-4xl hover:text-gray-500'>
-              <Link href='/' onClick={handleNav}>Portfolio</Link>
+              <Link href='/' onClick={handleNavMenu}>Portfolio</Link>
             </li>
             <li className='p-4 text-4xl hover:text-gray-500'>
-              <Link href='/gallery' onClick={handleNav}>About</Link>
+              <Link href='/about' onClick={handleNavMenu}>About</Link>
             </li>
             <li className='p-4 text-4xl hover:text-gray-500'>
-              <Link href='/contact' onClick={handleNav}>Contact</Link>
+              <Link href='/contact' onClick={handleNavMenu}>Contact</Link>
             </li>
           </ul>
         </div>

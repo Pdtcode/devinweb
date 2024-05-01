@@ -13,7 +13,7 @@ function Gallery() {
     "https://static.wixstatic.com/media/382fbb_0fed0845170f4ef4ba993fa26b76e2c7~mv2.jpg/v1/fit/w_1600,h_2314,q_90/382fbb_0fed0845170f4ef4ba993fa26b76e2c7~mv2.webp",
     "https://static.wixstatic.com/media/382fbb_f9c73f94da1c455cba99a66e651609c8~mv2.jpg/v1/fit/w_1600,h_2314,q_90/382fbb_f9c73f94da1c455cba99a66e651609c8~mv2.webp",
     "https://static.wixstatic.com/media/382fbb_d4812bba18064576875dd896710e6420~mv2.jpg/v1/fit/w_1600,h_2314,q_90/382fbb_d4812bba18064576875dd896710e6420~mv2.webp",
-    "https://static.wixstatic.com/media/382fbb_d4812bba18064576875dd896710e6420~mv2.jpg/v1/fit/w_1600,h_2314,q_90/382fbb_d4812bba18064576875dd896710e6420~mv2.webp",
+    
     // Add more URLs as needed
   ];
 
